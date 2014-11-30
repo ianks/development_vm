@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ENV['HOME'], '/home/vagrant/ianks', type: 'nfs'
   config.vm.provision :shell, path: 'bootstrap.sh'
 
-  open_ports = [3000, 7474, 8000, 8080, 27017, 27018, 35729]
+  open_ports = [3000, 7474, 8000, 8080, 8765, 27017, 27018, 35729]
 
   open_ports.each do |port|
     config.vm.network 'forwarded_port',
