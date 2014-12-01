@@ -12,13 +12,6 @@ add-apt-repository ppa:git-core/ppa
 # tmux/vim/etc.
 add-apt-repository ppa:pi-rho/dev
 
-# neo4j
-wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
-echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
-
-# zsh-completions
-git clone git://github.com/zsh-users/zsh-completions.git /usr/local/share/zsh-completions
-
 # tmuxifier
 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 
@@ -30,6 +23,10 @@ chmod +x /usr/local/bin/rmdirtrash
 
 # docker
 curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+# mongo
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
 # packages
 apt-get update
@@ -47,7 +44,8 @@ apt-get install -y \
   libxml2-dev \
   libxslt1-dev \
   libyaml-dev \
-  mongodb \
+  parallel \
+  mongodb-org \
   mysql-client \
   openjdk-7-jdk \
   postgresql \

@@ -1,0 +1,5 @@
+https://github.com/sstephenson/ruby-build.git /home/vagrant/.rbenv/plugins/ruby-build
+git://github.com/OiNutter/node-build.git /home/vagrant/.nodenv/plugins/node-build
+git://github.com/ianks/nodenv-sudo.git /home/vagrant/.nodenv/plugins/nodenv-sudo
+https://github.com/ianheggie/rbenv-binstubs.git /home/vagrant/.rbenv/plugins/rbenv-binstubs.git
+https://github.com/sstephenson/rbenv-gem-rehash.git /home/vagrant/.rbenv/plugins/rbenv-gem-rehash
